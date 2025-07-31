@@ -1,0 +1,24 @@
+plan
+disaster claim guard 
+-> functionability :
+upload image (pdf , doxc or email );
+embed open ai 
+retreve   releant clauses fromm db 
+call llm 
+use multer for upload 
+use dotenv for secret keys 
+
+
+router:
+/upload.js to upload image
+/query.js for query
+
+utils
+pareserPDf.js
+chunkText.js
+embedText.js
+
+mongooose
+
+
+

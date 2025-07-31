@@ -1,0 +1,23 @@
+{
+  "name": "disaster-claim-guard",
+  "version": "1.0.0",
+  "description": "\"A Node.js backend for Disaster Claim Guard — an AI-powered system that uses LLMs to analyze insurance queries and retrieve decisions from unstructured policy documents like PDFs, contracts, and emails.\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "mayank gupta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cloudinary": "^1.41.3",
+    "express": "^5.1.0",
+    "git": "^0.1.5",
+    "mongoose": "^8.16.4",
+    "multer": "^2.0.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "os": "^0.1.2",
+    "tesseract.js": "^6.0.1"
+  }
+}
