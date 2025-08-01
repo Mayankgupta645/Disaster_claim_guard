@@ -2,22 +2,20 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require("path");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { env } = require('process');
 
 const genAI = new GoogleGenerativeAI('AIzaSyAGdATkubbW6_Dj1qSAdKO-9F3zG3E6lNE');
-
 
 const filePath = path.join(__dirname, "sample_policy.txt");
 const data = fs.readFileSync(filePath, "utf8");
 
 async function askGemini(userQuery) {
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
   const prompt = `
 You are a disaster claim assistant. Use the policy document below to answer this query.
 
 Policy:
-${documentText}
+${data}
 
 Query:
 ${userQuery}
