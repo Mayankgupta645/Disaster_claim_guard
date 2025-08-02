@@ -1,10 +1,10 @@
 const mongoose= require('mongoose');
-require('dotenv').config();
-const mongodURl=process.env.url
-
-/
+require('dotenv').config({ path: __dirname + './../.env' });
+const mongodURl=process.env.MONGO_URL;
 mongoose.connect(mongodURl);
 const db=mongoose.connection;
+console.log("Mongo URI:", process.env.url);
+
 db.on('connected',()=>{
     console.log("mongod is connected");
 })
